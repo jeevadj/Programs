@@ -1,0 +1,21 @@
+Name : Kirubakaaran
+Gender : male
+Designation : student
+Email : kirugreat@gmail.com
+Address : bambakirapalayam
+Contact : 9999999999married
+Marital Status : married
+Age : 24
+Year Of Expierence : 3
+ Benefits :
+ 1. free cab facilities 
+ 2. 6months
+
+ Salary Details....
+
+Pay : 84333.335938
+Basic : 28750.000000
+HRA : 14375.000000
+DA : 7666.666992
+TA : 9583.333984
+ Pf (per month) : 11500.000000

@@ -1,0 +1,5 @@
+what is c?
+C is a programming language
+
+what is java?
+Java is also a programming language

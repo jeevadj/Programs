@@ -1,0 +1,16 @@
+Name : gautham
+Gender : male
+Designation : asst.CEO
+Email : gatham@tcs.com
+Address : pondicherry
+Contact : 738373837
+Marital Status : single
+Age : 21
+Year Of Expierence : 2
+
+ Salary Details....Pay : 88002.343750
+Basic : 30000.798828
+HRA : 15000.399414
+DA : 8000.212891
+TA : 10000.266602
+ Pf (per month) : 12000.319336

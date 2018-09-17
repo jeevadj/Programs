@@ -1,0 +1,16 @@
+Name : Dhamodhara
+Gender : male
+Designation : manager
+Email : dhamu@google.in
+Address : pondicherry
+Contact : 7273827837single
+Marital Status : single
+Age : 21
+Year Of Expierence : 0
+
+ Salary Details....Pay : 90493.335938
+Basic : 30850.000000
+HRA : 15425.000000
+DA : 8226.666992
+TA : 10283.333984
+ Pf (per month) : 12340.000000

@@ -1,0 +1,24 @@
+Name : jeeva
+Gender : male
+Designation : lead
+Email : d.jeeva@gmail.com
+Address : pondicherry
+Contact : 7373638389single
+Marital Status : single
+Age : 21
+Year Of Expierence : (null)Name : jeeva
+Gender : male
+Designation : lead
+Email : d.jeeva@gmail.com
+Address : pondicherry
+Contact : 7373638389single
+Marital Status : single
+Age : 21
+Year Of Expierence : 0
+
+ Salary Details....Pay : 33000.000000
+Basic : 11250.000000
+HRA : 5625.000000
+DA : 3000.000000
+TA : 3750.000000
+ Pf (per month) : 4500.000000

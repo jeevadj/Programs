@@ -1,0 +1,21 @@
+Name : nisha
+Gender : female
+Designation : teammember
+Email : dfiijfisaldjf
+Address : adihf;aidhf
+Contact : 2389234323married
+Marital Status : married
+Age : 26
+Year Of Expierence : 3
+ Benefits :
+ 1. free cab facilities 
+ 2. 6months 3. 1.5lakhs
+
+ Salary Details....
+
+Pay : 90534.914063
+Basic : 30864.175781
+HRA : 15432.087891
+DA : 8230.447266
+TA : 10288.058594
+ Pf (per month) : 12345.669922
