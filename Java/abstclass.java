@@ -1,6 +1,9 @@
 abstract class shape
 {
     abstract void draw();
+    public void shapes(){
+        System.out.println("Abstract Method...");
+    }
 }
 class rectangle extends shape
 {
