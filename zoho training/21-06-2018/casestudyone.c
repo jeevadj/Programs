@@ -1,9 +1,9 @@
 /*
 Design a calculator program
-Req: (i) obtain the input form user and perform the arithemetic calculation
-      (ii) identify the input
+Req:  ( i ) obtain the input form user and perform the arithemetic calculation
+      (ii ) identify the input
       (iii) perform the increment and decrement operation
-      (iv) casting, provide input and casting datatype.
+      (iv ) casting, provide input and casting datatype.
 Source Code Req:
        switch,else..if ladder, iterative, entry and exit check loop
 */

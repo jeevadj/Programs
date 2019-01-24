@@ -7,7 +7,7 @@ int main()
     int integer=2;
     int *i=&integer;
     v=i;
-    printf("%d",v);
+    printf("%d",i);
 }
 
 
