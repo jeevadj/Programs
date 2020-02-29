@@ -12,9 +12,9 @@ int main()
         temp++;
         if(a =='\n') break;
     }
-    printf("\n Diff = %d ",(temp - p));
+    printf("\n Diff = %d ",(temp - p)); // to find the total number of input got from user
     for(int itr=0; itr < count ; itr++){
-        printf("\n %d -- %d",itr,*(p+itr));
+        printf("\n %d -- %d",itr,*(p+itr)); 
     }
     return 0;
 }
