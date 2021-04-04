@@ -1,79 +1,133 @@
 #include<stdio.h>
 #include<stdlib.h>
-struct node{
-    int data;
-    struct node* link;
+
+/* Structure of Node */
+struct Node{
+	int id;
+	struct Node *address;
 }*start;
 
-void add(int d){
-    struct node *temp, *temp1;
-    if(start == NULL){
-        start =  malloc(sizeof(struct node));
-        start->data = d;
-        start->link = NULL;
-    }
-    else{
-        temp1 = malloc(sizeof(struct node));
-        temp = start;
-        while(temp->link!=NULL){
-            temp = temp->link;
-        }
+void insertData(){
+	system("clear");
+	int value;
+	printf("\n Enter a value to insert into list : ");
+	scanf("%d",&value);
+	if(start == NULL){
+		start = malloc(sizeof(struct Node*));
+		start->id = value;
+		start->address = NULL;
+	}else{
+		struct Node *temp = start;
 
-        temp1->data = d;
-        temp1->link = NULL;
+		while(temp->address != NULL){
+			temp = temp->address;
+		}
 
-        temp->link = temp1;
-        
-    }
-}
-void addInBetween(int d,int pos){
-    struct node *temp,*temp1;
-    temp = start;
-    int cnt = 1;
-    while(temp->link != NULL){
-        if(pos-1 == cnt){
-            break;
-        }
-        temp= temp->link;
-    }
-    temp1 = malloc(sizeof(struct node));
-      temp1->data = d;
-        temp1->link = temp->link;
+		struct Node *temp1 = malloc(sizeof(struct Node*));
+		temp1->id = value;
+		temp1->address = NULL;
 
-        temp->link = temp1;
+		temp->address = temp1;
+	}
 }
-void traverse(struct node* temp){
-   while(temp!= NULL){printf("\n data %d",temp->data); temp = temp->link;}
+
+void insertInBetween(){
+	system("clear");
+	int value, position;
+	printf("\n Enter a value, position to insert into list (format : val,pos) : ");
+	scanf("%d,%d",&value,&position);
+
+
+	if(start == NULL){
+		printf("\n List is empty so inserting in first position. ");
+		start = malloc(sizeof(struct Node*));
+		start->id = value;
+		start->address = NULL;
+	}else{
+		struct Node *temp = start;
+		int cnt = 1;
+		while(temp->address != NULL){
+			if(cnt == position - 1){
+				break;
+			}
+			cnt++;
+			temp = temp->address;
+		}
+
+		struct Node *temp1 = malloc(sizeof(struct Node*));
+		temp1->id = value;
+		temp1->address = temp->address;
+
+		temp->address = temp1;
+
+	}
 }
+
+void deleteByValue(){
+	system("clear");
+	if(start == NULL){
+		printf("List is empty....");
+		return;
+	}
+	int value;
+	printf("\n Enter a value to delete : ");
+	scanf("%d",&value);
+	struct Node *temp = start;
+	while(temp->address != NULL && temp->address->id != value){
+		temp = temp->address;
+	}
+
+	temp->address = temp->address->address;
+}
+
+void traverse(){
+	system("clear");
+	if(start == NULL){
+		printf("List is empty....");
+		return;
+	}
+	struct Node *temp = start;
+	while(temp != NULL){
+		printf("%d\n",temp->id);
+		temp = temp->address;
+	}
+}
+
+void size(){
+	system("clear");
+	int cnt = 0;
+
+	struct Node *temp = start;
+	while(temp != NULL){
+		cnt++;
+		temp = temp->address;
+	}
+	printf("Size of the list : %d",cnt);
+}
+
 int main(){
-    printf("\n Linked List Example");
-    int n,temp,choice,position;
-    
-    while(1){
-        printf("\n 1. Enter n values\n 2. Insert in between\n 3. Traverse through list \n Enter your choice : ");
-    scanf("%d",&choice);
-    switch(choice){
-        case 1 : printf("\n Enter the number of values to be inserted : ");
-                 scanf("%d",&n);
-    
-                 while(n--){
-                            printf("\n Enter value : ");
-                            scanf("%d",&temp);
-                             add(temp);
-                             printf("added");
-                    }
-                    printf("%d",start->data);
-                    break;
-        case 2 : printf("\n Enter the data and position to be inserted (eg: 12 3)");
-                 scanf("%d%d",&temp,&position);
-                 addInBetween(temp,position);
-                 break;
-        case 3 : traverse(start);break;
 
-        default : return 0;
+	int i = 0;
 
-    }
-    }
-    
- 
+	do{
+		printf("\n\nThis is a sample of LinkedList : \n\n");
+		printf("1. Insert\n");
+		printf("2. Insert In Between\n");
+		printf("3. Delete by Value\n");
+		printf("4. Delete by Position\n");
+		printf("5. Traverse\n");
+		printf("6. Size of List\n");
+		printf("Enter 0 to exit\n");
+		printf("Choose any of the above options : ");
+		scanf("%d",&i);
+		switch(i){
+			case 1 : insertData(); break;
+			case 2 : insertInBetween(); break;
+			case 3 : deleteByValue(); break;
+			case 4 : break;
+			case 5 : traverse(); break;
+			case 6 : size(); break;
+		}
+	}while(i != 0);
 }
+
