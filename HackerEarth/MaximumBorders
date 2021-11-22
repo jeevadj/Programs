@@ -1,0 +1,176 @@
+
+/** 
+10.  - testCases
+2 15. -- row column
+.....####......  -- input type '#' for black cell and '.' for white cell
+.....#.........
+7 9
+...###...
+...###...
+..#......
+.####....
+..#......
+...#####.
+.........
+18 11
+.#########.
+########...
+.........#.
+####.......
+.....#####.
+.....##....
+....#####..
+.....####..
+..###......
+......#....
+....#####..
+...####....
+##.........
+#####......
+....#####..
+....##.....
+.#######...
+.#.........
+1 15
+.....######....
+5 11
+..#####....
+.#######...
+......#....
+....#####..
+...#####...
+8 13
+.....######..
+......##.....
+########.....
+...#.........
+.............
+#######......
+..######.....
+####.........
+7 5
+.....
+..##.
+###..
+..##.
+.....
+..#..
+.#...
+14 2
+..
+#.
+..
+#.
+..
+#.
+..
+..
+#.
+..
+..
+..
+#.
+..
+7 15
+.###########...
+##############.
+...####........
+...##########..
+.......#.......
+.....#########.
+.#######.......
+12 6
+#####.
+###...
+#.....
+##....
+###...
+......
+.##...
+..##..
+...#..
+..#...
+#####.
+####..
+
+*/
+
+
+o/p :
+
+4
+5
+9
+6
+7
+8
+3
+1
+14
+5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+        
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int t = Integer.parseInt(br.readLine());
+        int[] result = new int[t];
+        for(int itr = 0 ; itr < t ; itr ++){
+            String[] setInput = br.readLine().split(" ");
+            int row = Integer.parseInt(setInput[0]);
+            int column = Integer.parseInt(setInput[1]);
+            int max = -1;
+            for(int r = 0 ; r < row ; r++){
+                String input = br.readLine();
+                char previousChar = input.charAt(0);
+                int count = (previousChar == '#' ) ? 1 : 0;
+                for(int c = 1 ; c < column ; c++){
+                    // System.out.println(String.format("r - %d, c - %d, pre - %c cur - %c, count - %d",r,c,previousChar, input.charAt(c), count));
+                    if(input.charAt(c) == '#'){
+                        if(previousChar == '#'){
+                            count++;
+                        }else if(previousChar == '.'){
+                            count = 1;
+                        }else{
+                            count = 0;
+                        }
+                    }    
+                    previousChar = input.charAt(c);
+                }
+                if(max < count){
+                    max = count;
+                }
+            }
+            result[itr] = max;
+        }
+        
+        for(int itr = 0 ; itr < t ; itr ++){
+            System.out.println(result[itr]);
+        }
+    
+    
+
+    }
+}
+
